@@ -31,13 +31,8 @@ def get_pecha_segments(pecha: Pecha):
             segments.append({"id": segment_id, "text": segment_text})
     return segments
 
-def insert_text_after_tag(text, new_text):
-    pattern = r"(<\d+><\d+>)"
-    match = re.match(pattern, text)
-    if new_text == "":
-        return match.group(1)
-    updated_text = match.group(1) + new_text
-    updated_text = updated_text.replace("$", "\n")
+def insert_break_after_text(new_text):
+    updated_text = new_text + "<br>"
     return updated_text
 
 
@@ -56,15 +51,12 @@ def update_the_json(pecha: Pecha):
         new_text = new_segment["text"]
         segment_id = (int(new_segment["id"]) - 1)
         old_text = json_content[segment_id]
-        updated_text = insert_text_after_tag(old_text, new_text)
+        updated_text = insert_break_after_text(new_text)
         new_content.append(updated_text)
     commentary_json["source"]["books"][0]["content"][0] = new_content
     write_json(Path(f"{pecha.pecha_path}/{pecha_id}.json"), commentary_json)
-    upload_commentary(Path(f"{pecha.pecha_path}/{pecha_id}.json"), Destination_url.STAGING, overwrite=True)
-    update_repo(pecha.pecha_path.__str__())
+    upload_commentary(Path(f"{pecha.pecha_path}/{pecha_id}.json"), Destination_url.PRODUCTION, overwrite=True)
     
-
-
 
 def main():
     pecha_id = pecha_id = Path.cwd().name
