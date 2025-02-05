@@ -1,0 +1,50 @@
+{
+  "id": "IA8144285",
+  "title": {
+    "en": "Entering the Middle Way Chapter 6, verses 1 to 64 Claude AI Draft",
+    "bo": "དབུ་མ་འཇུག་པ་ལས་སེམས་བསྐྱེད་དྲུག་པ། ཤོ་ལོ་ཀ ༡ ནས་ ༦༤"
+  },
+  "author": {
+    "en": "DPO and Claude-3-5-sonnet-20241022"
+  },
+  "imported": "2025-02-05T05:57:57.069065",
+  "source": "http://purl.bdrc.io/resource/WA1NLM688",
+  "toolkit_version": "0.0.1",
+  "parser": "GoogleDocTranslationParser",
+  "initial_creation_type": "google_docx",
+  "language": "en",
+  "source_metadata": {
+    "presentation": {
+      "en": ""
+    },
+    "usage_title": {
+      "en": "Entering the Middle Way Chapter 6, verses 1 to 64 Claude AI Draft",
+      "bo": "དབུ་མ་འཇུག་པ་ལས་སེམས་བསྐྱེད་དྲུག་པ། ཤོ་ལོ་ཀ ༡ ནས་ ༦༤"
+    },
+    "long_title": {
+      "en": "Entering the Middle Way Chapter 6, verses 1 to 64 Claude AI Draft"
+    },
+    "translation_of": "IB42962D2",
+    "document_id": "1ljfmPMQ6cbuknCP_9VkJDDdZQRpY0NfyLhQpNF9uK6g",
+    "translation_alignments": {
+      "root": "IB42962D2/layers/F741/Tibetan_Segment-D792.json",
+      "translation": "IA8144285/layers/4946/English_Segment-7A28.json"
+    }
+  },
+  "bases": [
+    {
+      "4946": {
+        "source_metadata": {
+          "total_segments": 63
+        },
+        "base_file": "4946.txt"
+      }
+    }
+  ],
+  "copyright": {
+    "status": "Unknown",
+    "notice": "",
+    "info_url": null
+  },
+  "licence": "Unknown"
+}
