@@ -46,7 +46,6 @@ def update_the_json(pecha: Pecha):
     pecha_id = pecha.id
     opf_segments = get_pecha_segments(pecha)
     commentary_json = get_pecha_json(pecha)
-    json_content = commentary_json["source"]["books"][0]["content"][0]
     for new_segment in opf_segments:
         new_text = new_segment["text"]
         segment_id = (int(new_segment["id"]) - 1)
